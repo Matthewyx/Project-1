@@ -1,0 +1,15 @@
+starting: Thu Nov 22 02:21:05 AEDT 2018
+    host: r107
+
+======================================================================================
+                  Resource Usage on 2018-11-22 14:31:01:
+   Job Id:             2700390.r-man2
+   Project:            ws55
+   Exit Status:        271 (Linux Signal 15 SIGTERM Termination)
+   Service Units:      24.32
+   NCPUs Requested:    2                      NCPUs Used: 2               
+                                           CPU Time Used: 09:08:12                                   
+   Memory Requested:   10.0GB                Memory Used: 218.97MB        
+   Walltime requested: 48:00:00            Walltime Used: 12:09:42        
+   JobFS requested:    100.0MB                JobFS used: 0B              
+======================================================================================

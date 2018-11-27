@@ -1,0 +1,46 @@
+#!/bin/bash
+# Lines starting with "#PBS" are directives to the scheduler
+# Job name -- something meaningful to you
+#PBS -N cha_dx0.01
+
+# Job attributes, used by the scheduler
+#PBS -l walltime=48:00:00
+#PBS -l mem=10gb
+#PBS -l ncpus=1
+#PBS -l wd
+
+## Comment out to use automatic assignment to best-fit queue
+#PBS -q normal
+
+# Specify output files to go somewhere sensible
+#PBS -o test.out
+#PBS -e test.err
+
+# Set up mail notifications
+#PBS -M yuxulx@icloud.com
+#PBS -m abe
+
+module load intel-fc/13.2.146
+##module load pgi/15.5
+
+####rocks-openmpi   
+
+##module load rocks-openmpi
+##export MPICH=/opt/openmpi
+##export PATH=/home/z5110939/soft_applications/ftooc/bin:$MPICH/bin:$MPICH/include:$PATH
+##export LD_LIBRARY_PATH=$MPICH/lib:/home/z5110939/soft_applications/ftooc/lib:/home/z3476341/intel/composer_xe_2013_sp1.0.080/compiler/lib/mic:$LD_LIBRARY_PATH
+##export C_INCLUDE_PATH=/home/z5110939/soft_applications/ftooc/include:$C_INCLUDE_PATH
+##export OMP_NUM_THREADS=4
+
+##source /home/z5110939/intel/composer_xe_2013_sp1.0.080/bin/compilervars.sh intel64
+
+#####openmpi/1.8.5
+
+# The job proper start here
+# This will normally invoke whatever program you are planning to run
+echo "starting:" `date`
+echo "    host:" `hostname`
+ifort channeldx0.01.f90 -O3 -o a.out
+./a.out >nohup.out
+echo "  ending:" `date`
+

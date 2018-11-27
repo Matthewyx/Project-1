@@ -1,0 +1,6 @@
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+a.out              000000000040800A  Unknown               Unknown  Unknown
+a.out              0000000000402E6C  Unknown               Unknown  Unknown
+
+Stack trace terminated abnormally.
